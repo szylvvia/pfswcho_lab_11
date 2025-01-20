@@ -13,6 +13,10 @@
 
 ![image](https://github.com/user-attachments/assets/84c88bca-01fe-4ea7-923b-ef5e691c51f3)
 
+```
+kubectl scale deployment  mysql-deploy --replicas=3
+```
+
 Skalowanie w górę obiektu Deployment
 
 ![image](https://github.com/user-attachments/assets/03940140-3874-421d-b79d-cb4543b66ce3)
@@ -30,6 +34,10 @@ Skalowanie w dół obiektu Deployment
 Utworzono pliki manifestów dla PV oraz PVC aby podczas skalowania mogły zostac tworzone automatycznie kolejne trwałe magazyny danych. Zapewniają, że każda replika w StatefulSet ma dostęp do trwałego i unikalnego dysku. PVC tworzone przez StatefulSet automatycznie otrzymuje powiązany PV, co umożliwia skalowanie aplikacji z zachowaniem trwałości danych.
 
 ![image](https://github.com/user-attachments/assets/574d684e-4714-461f-afaa-b8b48e893b26)
+
+```
+scale statefulset mysql-statefulset --replicas=3
+```
 
 Skalowanie w górę obiektu StatefulSet
 
